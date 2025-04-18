@@ -36,8 +36,7 @@ public class AccountRegistrationPage {
 	@FindBy(xpath = "//input[@id='input-continue']")
 	WebElement btnContinue;
 
-	@FindBy(xpath="//h1[normalize-space()="Your Account
-	Has Been Created!")
+	@FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
 	WebElement msgConfirmation;
 
 	public void setFirstName(String fname) {
