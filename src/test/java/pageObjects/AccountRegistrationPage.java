@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AccountRegistrationPage {
+public class AccountRegistrationPage extends BasePage{
 
 	public AccountRegistrationPage(WebDriver driver) {
-		super();
+		super(driver);
 	}
 
 	// Locators for Webelement of Registration Page
@@ -30,20 +30,20 @@ public class AccountRegistrationPage {
 	@FindBy(xpath = "//input[@id='input-confirm']")
 	WebElement txtConfirmPassword;
 
-	@FindBy(xpath = "//input[@id='input-agree']")
+	@FindBy(xpath = "//input[@name='agree']")
 	WebElement chkdPolicy;
 
-	@FindBy(xpath = "//input[@id='input-continue']")
+	@FindBy(xpath = "//input[@value='Continue']")
 	WebElement btnContinue;
 
-	@FindBy(xpath="//h1[normalize-space()='Your Account Has Been Created!']")
+	@FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
 	WebElement msgConfirmation;
 
 	public void setFirstName(String fname) {
 		txtFirstname.sendKeys(fname);
 	}
 
-	public void LastName(String lname) {
+	public void setLastName(String lname) {
 		txtLastname.sendKeys(lname);
 	}
 
@@ -67,8 +67,8 @@ public class AccountRegistrationPage {
 		chkdPolicy.click();
 	}
 
-	public void clickContinue(String fname) {
-		btnContinue.sendKeys(fname);
+	public void clickContinue() {
+		btnContinue.click();
 	}
 
 	public String getConfirmationMsg() {
