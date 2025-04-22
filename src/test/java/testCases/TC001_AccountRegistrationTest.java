@@ -42,19 +42,5 @@ public class TC001_AccountRegistrationTest extends BaseClass {
 
 	}
 
-	public String randomeString() {
-		String generatedstring = RandomStringUtils.randomAlphabetic(5);
-		return generatedstring;
-	}
-
-	public String randomeNumber() {
-		String generatednumber = RandomStringUtils.randomNumeric(10);
-		return generatednumber;
-	}
-
-	public String randomeAlphaNumberic() {
-		String generatedstring = RandomStringUtils.randomAlphabetic(3);
-		String generatednumber = RandomStringUtils.randomNumeric(3);
-		return (generatedstring + "@" + generatednumber);
-	}
+	
 }
